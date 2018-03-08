@@ -1,0 +1,1081 @@
+/* clear */
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+form {
+	margin: 0;
+}
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+input,
+select,
+textarea,
+button {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: 1px solid #000;
+	box-sizing: content-box;
+}
+textarea {
+	resize: none;
+	overflow: auto;
+}
+a {
+	text-decoration: none;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+table {
+	border-collapse: collapse;
+}
+main {
+	display: block;
+}
+td,
+th {
+	padding: 0;
+}
+em {
+	font-style: normal;
+}
+strong {
+	font-weight: normal;
+}
+.clearFix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* con */
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+.wrap {
+    width: 100%;
+    height: 100%;
+    background: url(../img/BG3.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.con {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 40px;
+    width: 100%;
+}
+.con-list {
+    position: relative;
+    width: 100%;
+    /* height: 580px; */
+    height: 100%;
+}
+.con-list li {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    background: #000;
+}
+.con-list li img {
+    width: 60px;
+    height: 60px;
+}
+.con-list li p {
+    font: 14px/20px "微软雅黑";
+    color: #fff;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.con-list li .text {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    font: 14px/20px "微软雅黑";
+    border-color: #fff;
+    color: #fff;
+    background: transparent;
+}
+
+
+.show {
+    border: 1px solid red;
+}
+
+
+.activeLi {
+    border: 1px solid blue;
+}
+
+
+
+/* 窗口 */
+.windowBox {
+    position: absolute;
+    left: 300px;
+    top: 10px;
+    width: 540px;
+    height: 300px;
+    background: #000;
+    padding: 30px 10px 10px 10px;
+    box-sizing: border-box;
+    
+}
+.windowBox .windowLeft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    cursor: w-resize
+}
+.windowBox .windowTop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    cursor: n-resize;
+}
+.windowBox .windowRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    cursor: e-resize;
+}
+.windowBox .windowBottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    cursor: s-resize;
+}
+.windowBox .windowTopLeft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    cursor: nw-resize;
+}
+.windowBox .windowTopRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    cursor: ne-resize;
+}
+.windowBox .windowBottomLeft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    cursor: sw-resize;
+}
+.windowBox .windowBottomRight {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    cursor: se-resize;
+}
+/* 窗口右上角 */
+.windowBox-bar-model {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+.windowBox-bar-model li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font: 12px/20px Arial;
+    color: #fff;
+}
+.windowBox-bar-model li:nth-of-type(2) {
+    margin: 0 2px;
+}
+.windowBox-bar-model li:nth-of-type(3) {
+    width: 30px;
+    background: #c75050;
+}
+.windowBox-bar-model li:nth-of-type(1):hover,
+.windowBox-bar-model li:nth-of-type(2):hover {
+    background: blue;
+    cursor: pointer;
+}
+.windowBox-bar-model li:nth-of-type(3):hover {
+    background: red;
+    cursor: pointer;
+}
+/* 窗口标题 */
+.windowBox-mod-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+}
+.windowBox-mod-header h3 {
+    font: 16px/30px "微软雅黑";
+    color: #fff;
+    text-align: center;
+    cursor: default;
+}
+/* 窗口内容 */
+.windowBox-con {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-sizing: border-box;
+}
+.windowBox-crumbsBar {
+    width: 100%;
+    height: 30px;
+    background: #B51746;
+}
+.back {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: 1px;
+}
+.windowBox-crumbsBar .back img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.crumbs {
+    float: left;
+    background: #fff;
+    width: 300px;
+    height: 28px;
+    font: 14px/28px "微软雅黑";
+    border: 1px solid #ccc;
+    margin-left: 3px;
+    text-indent: 5px;
+}
+/*  */
+.windowBox-conList {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+.windowBox-conList li {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    background: #000;
+}
+.windowBox-conList li img {
+    width: 60px;
+    height: 60px;
+}
+.windowBox-conList li p {
+    font: 14px/20px "微软雅黑";
+    color: #fff;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.windowBox-conList li .text {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    font: 14px/20px "微软雅黑";
+    border-color: #fff;
+    color: #fff;
+    background: transparent;
+}
+/* 大图标 */
+.windowBox-conList .model-big {
+    float: left;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background: #000;
+    margin: 10px;
+}
+.windowBox-conList .model-big img {
+    width: 60px;
+    height: 60px;
+}
+.windowBox-conList .model-big p {
+    font: 14px/20px "微软雅黑";
+    color: #fff;
+}
+
+/* 中等图标 */
+.windowBox-conList .model-medium {
+    float: left;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background: #000;
+    margin: 10px;
+}
+.windowBox-conList .model-medium img {
+    width: 40px;
+    height: 40px;
+}
+.windowBox-conList .model-medium p {
+    font: 14px/20px "微软雅黑";
+    color: #fff;
+}
+
+/* 小图标 */
+.windowBox-conList .model-small {
+    float: left;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    margin: 5px;
+    font-size: 0;
+}
+.windowBox-conList .model-small img {
+    width: 20px;
+    height: 20px;
+}
+.windowBox-conList .model-small p {
+    display: inline-block;
+    font: 14px/20px "微软雅黑";
+}
+
+/* 列表 */
+.windowBox-conList .model-list {
+    float: none;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    margin: 5px;
+    font-size: 0;
+    background: #fff;
+}
+.windowBox-conList .model-list img {
+    width: 20px;
+    height: 20px;
+}
+.windowBox-conList .model-list p {
+    display: inline-block;
+    text-indent: 5px;
+    font: 14px/20px "微软雅黑";
+    color: #000;
+}
+
+
+
+/* 设置窗口 */
+.settingBox {
+    display: none;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 300px;
+    height: 320px;
+    background: rgba(0, 0, 0, 1);
+}
+.settingBox h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    font: 16px/30px "微软雅黑";
+    color: #fff;
+    text-align: center;
+}
+.settingBox-con {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    width: 280px;
+    height: 280px;
+    background: #fff;
+    font: 16px/30px "微软雅黑";
+    text-align: center;
+}
+.bolgName input {
+    width: 150px;
+    text-align: center;
+    font: 16px/30px "微软雅黑";
+    border-color: #ccc;
+    color: #333;
+}
+.btnBox {
+    margin-top: 20px;
+}
+.btnBox input{
+    width: 80px;
+    font: 16px/30px "微软雅黑";
+    border-color: #000;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.settingBox-con p:hover {
+    cursor: default;
+}
+ 
+/* 属性窗口 */
+.propertyBox {
+    display: none;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 0, 0, 1);
+}
+.propertyBox h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    font: 16px/30px "微软雅黑";
+    color: #fff;
+    text-align: center;
+}
+.propertyBox-con {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    width: 280px;
+    height: 260px;
+    background: #fff;
+    font: 16px/30px "微软雅黑";
+    text-align: center;
+}
+.propertyBox-con span {
+    color: red;
+}
+.propertyBoxName input{
+    width: 150px;
+    text-align: center;
+    font: 16px/30px "微软雅黑";
+    border-color: #ccc;
+    color: #333;
+}
+/* 单选的滑块移动 */
+.judge input{
+    display: none;
+    opacity: .3;
+}
+.judge label{
+    margin: 0 20px;
+    cursor: pointer;
+}
+.judge {
+    display: inline-block;
+    border: 3px solid #000;
+    padding: 5px;
+    position: relative;
+}
+.mask{
+    width: 56px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    background-color: red;
+    transition: .3s cubic-bezier(.17,.67,.62,1.41);
+}
+.judge input:nth-of-type(1):checked~span{
+    left: 10px;
+}
+.judge input:nth-of-type(2):checked~span{
+    left: 66px;
+}
+.state .judge input:nth-of-type(2):checked~span{
+    left: 90px;
+}
+
+/* 右键 */
+.mouse {
+    display: none;
+    position: absolute;
+    left: 700px;
+    top: 300px;
+    width: 32px;
+    z-index: 99999;
+}
+.mouse-list>li {
+    position: relative;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    font-size: 0;
+    background :#000;
+    border: 1px solid transparent;
+}
+.mouse-list>li>img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.mouse-list>li>p {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    font: 14px/30px "微软雅黑";
+    color: #fff;
+}
+.RecycleCon li p {
+    width: 70px;
+}
+.mouse-list li:hover {
+    cursor: pointer;
+    border-color: red;
+}
+.mouse-list li:hover  .add-list,
+.mouse-list li:hover  .Preview-list,
+.mouse-list li:hover  .sortingOrder-list {
+    display: block;
+}
+/* 新建菜单 */
+.add-list {
+    display: none;
+    position: absolute;
+    left: 72px;
+    top: 0;
+    width: 100px;
+    background: #000;
+}
+.add-list li {
+    position: relative;
+    color: #fff;
+    font: 14px/28px "微软雅黑";
+}
+.add-list li p {
+    border: 1px solid transparent;
+}
+.add-list li p:hover {
+    border-color: red;
+}
+/* 排序菜单 */
+.sortingOrder-list {
+    display: none;
+    position: absolute;
+    left: 72px;
+    top: 0;
+    width: 100px;
+    background: #000;
+}
+.sortingOrder-list li {
+    position: relative;
+    color: #fff;
+    font: 14px/28px "微软雅黑";
+}
+.sortingOrder-list li:nth-of-type(3) {
+    border-bottom: 1px solid #333;
+}
+.sortingOrder-list li:nth-of-type(4):after,
+.sortingOrder-list li:nth-of-type(5):after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 28px;
+    height: 28px;
+    background: url(../img/icos/Boxedcheckbox-05.png) no-repeat;
+    background-size: 100% 100%;
+}
+.sortingOrder-list li:nth-of-type(4):after {
+    background: url(../img/icos/Boxedcheckbox-04.png) no-repeat;
+    background-size: 100% 100%;
+}
+.sortingOrder-list li p {
+    border: 1px solid transparent;
+}
+.sortingOrder-list li p:hover {
+    border-color: red;
+}
+/* 布局菜单 */
+.Preview-list {
+    display: none;
+    position: absolute;
+    left: 72px;
+    top: 0;
+    width: 100px;
+    background: #000; 
+}
+.Preview-list li {
+    position: relative;
+    color: #fff;
+    font: 14px/28px "微软雅黑";
+}
+.Preview-list li p {
+    border: 1px solid transparent;
+}
+.Preview-list li p:hover {
+    border-color: red;
+}
+
+/* 计算器 */
+.Calculator {
+    /* display: none; */
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    width: 280px;
+    height: 270px;
+    padding: 30px 10px 10px 10px;
+    background: #000;
+}
+.Calculator-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    cursor: move;
+}
+.Calculator-header h3 {
+    font: 16px/30px "微软雅黑";
+    color: #fff;
+    text-align: center;
+}
+.CalculatorCon {
+    width: 270px;
+    height: 60px;
+    background: #2e2e2e;
+    margin: 0 5px;
+}
+.CalculatorCon p {
+    color: #fff;
+    font: 16px/30px "微软雅黑";
+}
+.CalculatorCon p:nth-of-type(2) {
+    text-align: right;
+}
+.CalculatorList {
+    margin-top: 10px;
+    width: 280px;
+}
+.CalculatorList li {
+    float: left;
+    width: 60px;
+    height: 30px;
+    background: skyblue;
+    color: #fff;
+    font: 16px/30px "微软雅黑";
+    margin: 5px;
+    text-align: center;
+    background-color: #3f3f3f;
+}
+.CalculatorList li:nth-of-type(17) {
+    width: 130px;
+}
+.CalculatorList li:nth-of-type(19) {
+    background-color: #458500;
+}
+.CalculatorList li:hover {
+    background-color: #585858;
+}
+.CalculatorList li:nth-of-type(19):hover {
+    background-color: #5d9521;
+}
+
+/* 底部 */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, .5);
+    z-index: 99999;
+}
+/* 开始菜单 */
+.start {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+}
+.start img {
+    width: 50px;
+    height: 40px;
+}
+.startBar {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 40px;
+    width: 270px;
+    padding: 10px;
+    background: rgba(0, 0, 0, .8);
+}
+.startBar-list {
+    width: 180px;
+    border-right: 1px solid pink;
+}
+.startBar-list li {
+    float: left;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+}
+.startBar-list li img {
+    width: 70px;
+    height: 70px;
+}
+.startBar-list li:hover {
+    cursor: pointer;
+}
+.userImg {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 65px;
+    height: 65px;
+    background: #fff;
+    padding: 5px 0 0 5px;
+}
+.userImg img {
+    width: 60px;
+    height: 60px;
+}
+.userImg:hover {
+    cursor: pointer;
+}
+.Shutdown {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 时间 */
+.times {
+    position: absolute;
+    right: 8px;;
+    top: 0;
+    width: 75px;
+    height: 40px;
+    cursor: pointer;
+}
+.times p {
+    font: 12px/20px "微软雅黑";
+    text-align: center;
+    color: #fff;
+}
+.timeBox {
+    display: none;
+    position: absolute;
+    bottom: 48px;
+    right: 8px;
+    width: 345px;
+    height: 245px;
+    background: rgba(0, 0, 0, .3);
+}
+.timeBox-con {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 329px;
+    height: 229px;
+    background: #00afed;
+}
+
+
+/* 选框 */
+.selectBox {
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    z-index:  999;
+}	
+.selectBox span {
+	position: absolute;
+	background: red;
+}
+.selectBoxLeft {
+	width: 1px;
+	left: -.5px;
+	top: -.5px;
+	padding: .5px 0;
+	height: 100%;
+}
+.selectBoxTop {
+	width: 100%;
+	left: -.5px;
+	top: -.5px;
+	padding: 0 .5px;
+	height: 1px;
+}
+.selectBoxRight {
+	width: 1px;
+	right: -.5px;
+	top: -.5px;
+	padding: .5px 0;
+	height: 100%;
+}
+.selectBoxBottom {
+	width: 100%;
+	left: -.5px;
+	bottom: -.5px;
+	padding: 0 .5px;
+	height: 1px;
+}
+
+/* 任务栏 */
+.footerBar {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    height: 40px;
+}
+.footerBar li {
+    float: left;
+    margin-left: 3px;
+    border: 1px solid #f0efee;
+}
+.footerBar li img {
+    width: 38px;
+    height: 38px;
+}
+.footerBar li:hover {
+    border-color: red;
+}
+
+
+
+/* 右键 */
+.contextmenu {
+    display: none;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #000;
+    background: black;
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
+    /* text-indent: 40px; */
+    text-align: center;
+    font-size: 14px;
+}
+.contextmenu li {
+    position: relative;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.contextmenu li.disabled {
+    color: #ccc;
+}
+.contextmenu li.disabled:hover {
+    /* background: white; */
+    color: #ccc;
+}
+.contextmenu li:hover {
+    background: #f90;
+    color: white;
+}
+.contextmenu li:hover ul {
+    display: block;
+}
+.contextmenu li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+}
+.contextmenu ul {
+    display: none;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
+    text-indent: 10px;
+}
+
+
+/* 上传文件 */
+#file-upload {
+    display: none;
+}
+.file-upload {
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background: #ccc;
+    text-align: center;
+    font: 16px/30px "宋体";
+    color: #030303;
+}
+.file-upload:hover {
+    cursor: pointer;
+    background: greenyellow;
+}
+/* 文件窗口 */
+.fileShow {
+	position: absolute;
+    left: 200px;
+    top: 200px;
+    min-width: 320px;
+    background: #000;
+    padding: 30px 10px 10px;
+    box-sizing: border-box;
+    /* overflow: auto; */
+}
+.fileShow img {
+    width: 300px;
+}
+.fileShow p {
+    width: 100%;
+    font: 14px/30px "微软雅黑";
+    background: #fff;
+}
+.fileShow .videoWrap {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.bgm {
+    position: absolute;
+    right: 100px;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    border: 1px solid transparent;
+}
+.bgm img {
+    width: 38px;
+    height: 38px;
+}
+.bgm:hover {
+    border-color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+}
+.audioWindow {
+    width: 300px;
+    height: 250px;
+    background: #fff;
+    text-align: center;
+    padding-top: 20px;
+    position: relative;
+}
+.audioWindow  img {
+    width: 150px;
+    height: 150px;
+}
+.audioWindow  h4 {
+    display: block;
+    color: #ccc;
+    margin-top: 20px;
+}
+.bgAudio {
+    position: absolute;
+    left: 0;
+    top: 220px;
+}
+
+
+
+.drawBox {
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    width: 320px;
+    height: 470px;
+    padding: 60px 10px 10px 10px;
+    box-sizing: border-box;
+    z-index: 5;
+    background: #000;
+}
+.drawingBar {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    /* width: 100%; */
+    height: 30px;
+}
+.drawingBar li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+.drawingBar li input {
+    width: 30px;
+    height: 30px;
+    border: 0;
+}
+.drawing {
+    display: block;
+    background: #ccc;
+}
+
+.linshiUl {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}

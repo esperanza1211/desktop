@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/celendar.css">
+<title>Document</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="con"> 
+        <ul class="con-list">
+            <!-- <li>
+                <img src="img/icos/Recycle-Bin.png" />
+                <p>回收站</p>
+            </li>
+            <li>
+                <img src="img/icos/Settings - 13.png" />
+                <p>博客设置</p>
+            </li>
+            <li>
+                <img src="img/icos/Media Connect-WF.png" />
+                <p>内容管理</p>
+            </li> -->
+        </ul>
+        <!-- <div class="windowBox">
+            <ul class="windowBox-bar-model clearFix">
+                <li>-</li>
+                <li>+</li>
+                <li>X</li>
+            </ul>
+            <div class="windowBox-header"><h3>资源管理器</h3></div>
+            <div class="windowBox-con">
+                <div class="windowBox-conWrap">
+                    <div class="windowBox-crumbsBar">
+                        <a href="javascript:;" class="back"><img src="img/icos/Backward-WF.png" title="上一级" /></a>
+                        <div class="crumbs"></div>
+                    </div>
+                    <ul class="windowBox-conList clearFix">
+                        <li class="model-list">
+                            <img src="img/icos/Folder-02-WF.png" />
+                            <p>博客分类</p> 
+                        </li>
+                        <li class="model-list">
+                            <img src="img/icos/File-WF.png" />
+                            <p>新建博客</p>
+                        </li>
+                        <li class="model-list">
+                            <img src="img/icos/File-WF.png" />
+                            <p>新建博客</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+        <ul id="contextmenu" class="contextmenu"></ul>
+        <!-- <div class="mouse">
+            <ul class="mouse-list Gap">
+                <li>
+                    <img src="img/icos/New Mail-WF.png"/>
+                    <p>新建</p>
+                    <ul class="add-list">
+                        <li class="newFolder"><p>新建文件夹</p></li>
+                        <li class="newFiles"><p>新建文件</p></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="img/icos/Properties-WF.png"/>
+                    <p>排序</p>
+                    <ul class="sortingOrder-list">
+                        <li><p>名称</p></li>
+                        <li><p>日期</p></li>
+                        <li><p>类型</p></li>
+                        <li><p>递增</p></li>
+                        <li><p>递减</p></li>
+                    </ul>
+                </li>
+                <li class="checkMore">
+                    <img src="img/icos/Check List-WF.png"/>
+                    <p>全选</p>
+                </li>
+                <li class="pasteMouse">
+                    <img src="img/icos/Paste.png"/>
+                    <p>粘贴</p>
+                </li>
+            </ul>
+            <ul class="mouse-list Folder">
+                <li>
+                    <img src="img/icos/Setting_2-WF.png"/>
+                    <p>属性</p>
+                </li>
+                <li class="rename">
+                    <img src="img/icos/Edit-01-WF.png"/>
+                    <p>命名</p>
+                </li>
+                <li class="copy">
+                    <img src="img/icos/Copy-WF.png"/>
+                    <p>复制</p>
+                </li>
+                <li class="cut">
+                    <img src="img/icos/Cut-WF.png"/>
+                    <p>剪切</p>
+                </li>
+                <li class="delete">
+                    <img src="img/icos/Delete-02-WF.png"/>
+                    <p>删除</p>
+                </li>
+                <li>
+                    <img src="img/icos/Letter Open2-WF.png"/>
+                    <p>打开</p>
+                </li>
+            </ul>
+            <ul class="mouse-list Files">
+                <li>
+                    <img src="img/icos/Note-02.png"/>
+                    <p>编辑</p>
+                </li>
+                <li>
+                    <img src="img/icos/Setting_2-WF.png"/>
+                    <p>属性</p>
+                </li>
+                <li class="rename">
+                    <img src="img/icos/Edit-01-WF.png"/>
+                    <p>命名</p>
+                </li>
+                <li class="copy">
+                    <img src="img/icos/Copy-WF.png"/>
+                    <p>复制</p>
+                </li>
+                <li class="cut">
+                    <img src="img/icos/Cut-WF.png"/>
+                    <p>剪切</p>
+                </li>
+                <li class="delete">
+                    <img src="img/icos/Delete-02-WF.png"/>
+                    <p>删除</p>
+                </li>
+                
+            </ul>
+            <ul class="mouse-list RecycleCon">
+                <li>
+                    <p>删除</p>
+                </li>
+                <li>
+                    <p>还原</p>
+                </li>
+            </ul>
+        </div> -->
+        <div class="settingBox">
+            <h3>设置</h3>
+            <ul class="windowBox-bar-model clearFix">
+                <li>
+                    <span>-</span>
+                </li>
+                <li>
+                    <span>+</span>
+                </li>
+                <li>
+                    <span>X</span>
+                </li>
+            </ul>
+            <div class="settingBox-con">
+                <div class="bolgName">
+                    <p>博客名称:</p>
+                    <input type="text" value="博客">
+                </div>
+                <div class="state">
+                    <p>博客状态:</p>
+                    <div class="judge">
+                        <input type="radio" name="state" id="state_yes" /><label for="state_yes">开启</label>
+                        <input type="radio" name="state" id="state_no" /><label for="state_no">关闭</label>
+                        <span class="mask"></span>
+                    </div>
+                </div>
+                <div>
+                    <p>是否允许开放评论:</p>
+                    <div class="judge">
+                        <input type="radio" name="comment" id="comment_yes" /><label for="comment_yes">是</label>
+                        <input type="radio" name="comment" id="comment_no" /><label for="comment_no">否</label>
+                        <span class="mask"></span>
+                    </div>
+                </div>
+                <div class="btnBox">
+                    <input type="button" value="确认" class="confirm">
+                    <input type="button" value="关闭" class="close">
+                </div>
+            </div>
+        </div>
+        <div class="propertyBox">
+            <h3>属性</h3>
+            <ul class="windowBox-bar-model clearFix">
+                <li>
+                    <span>-</span>
+                </li>
+                <li>
+                    <span>+</span>
+                </li>
+                <li>
+                    <span>X</span>
+                </li>
+            </ul>
+            <div class="propertyBox-con">
+                <div class="propertyBoxName">
+                    <p>分类名称</p>
+                    <input type="text" value="新建分类">
+                </div>
+                <p>
+                    包含:
+                </p>
+                <p>
+                    <span>几篇博客</span>
+                    <span>几个分类</span>
+                </p>
+                <div>
+                    <p>是否可以添加内容:</p>
+                    <div class="judge">
+                        <input type="radio" name="sex" id="con_yes" /><label for="con_yes">是</label>
+                        <input type="radio" name="sex" id="con_no" /><label for="con_no">否</label>
+                        <span class="mask"></span>
+                    </div>
+                </div>
+                <div class="btnBox">
+                    <input type="button" value="确认" class="confirm">
+                    <input type="button" value="关闭" class="close">
+                </div>
+            </div>
+        </div>
+        <!-- <div class="Calculator">
+            <ul class="windowBox-bar-model clearFix">
+                <li>
+                    <span>-</span>
+                </li>
+                <li>
+                    <span>+</span>
+                </li>
+                <li>
+                    <span>X</span>
+                </li>
+            </ul>
+            <div class="CalculatorCon">
+                <p>123456+123456=</p>
+                <p>123456</p>
+            </div>
+            <ul class="CalculatorList">
+                <li>CE</li>
+                <li>C</li>
+                <li>Del</li>
+                <li>/</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>*</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>-</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>+</li>
+                <li>0</li>
+                <li>.</li>
+                <li>=</li>
+            </ul>
+        </div> -->
+        <ul class="linshiUl"></ul>
+    </div>
+    <div>
+        <label for="file-upload" class="file-upload">上传文件</label>
+        <input type="file" id="file-upload">
+    </div>
+    <footer class="footer">
+        <div class="start">
+            <img src="img/ico/WindowsLogo.png" />
+        </div>
+        <div class="startBar">
+            <ul class="startBar-list clearFix">
+                <!-- <li>
+                    <img src="img/icos/User Profile 1-WF.png" title="UserInfor"/>
+                </li> -->
+                <li class="newFolder">
+                    <img src="img/icos/Add-New.png" title="Add"/>
+                </li>
+                <li class="CalculatorImg">
+                    <img src="img/icos/Calculation-WF.png" title="Calculator">
+                </li>
+                <!-- <li>
+                    <img src="img/icos/Palette-01-WF.png" title="Palette">
+                </li> -->
+            </ul>
+            <div class="userImg">
+                <img src="img/user.jpg" />
+            </div>
+            <!-- <div class="Shutdown">
+                <img src="img/icos/Shutdown-WF.png" title="Shutdown">
+            </div> -->
+        </div>
+        <ul class="footerBar">
+            <!-- <li>
+                <img src="img/icos/Open Folder-WF.png" />
+            </li>
+            <li>
+                <img src="img/icos/Open Folder-WF.png" />
+            </li>
+            <li>
+                <img src="img/icos/Open Folder-WF.png" />
+            </li>
+            <li>
+                <img src="img/icos/Open Folder-WF.png" />
+            </li> -->
+        </ul>
+        <div class="times">
+            <p class="timesHours">11:42</p>
+            <p class="timesCalendar">2017/11/16</p>
+        </div>
+        <div class="timeBox">
+            <div class="timeBox-con">
+                <h3></h3>
+                <div class="dataBox">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="celendar">
+        <a href="javascript:;" class="date" >2017年8月01日</a>
+        <div class="celendar-cont clearfix">
+            <div class="celendar-left">
+                <div class="celendar-ltitle">
+                    <div class="pre-box">
+                        <span class="pre"></span>
+                    </div>
+                    <div class="next-box">
+                        <span class="next"></span>
+                    </div>
+                    <div class="title-box" >
+                        <p class="title">2017年8月</p>
+                    </div>
+                </div>
+                <div class="celendar-lcont">
+                    <ul class="month celendar-lbox">
+                        <li>
+                            <ul class="month-title">
+                                <li>日</li>
+                                <li>一</li>
+                                <li>二</li>
+                                <li>三</li>
+                                <li>四</li>
+                                <li>五</li>
+                                <li>六</li>
+                            </ul>
+                            <ul class="month-cont clearfix">
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="month-title">
+                                <li>日</li>
+                                <li>一</li>
+                                <li>二</li>
+                                <li>三</li>
+                                <li>四</li>
+                                <li>五</li>
+                                <li>六</li>
+                            </ul>
+                            <ul class="month-cont clearfix"></ul>
+                        </li>
+                    </ul>
+                    <ul class="year celendar-lbox">
+                        <li>
+                            <ul class="year-cont clearfix">
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="year-cont clearfix">
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="year-ten celendar-lbox">
+                        <li>
+                            <ul class="year-ten-cont clearfix">
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="year-ten-cont clearfix">
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="year-hundred celendar-lbox">
+                        <li>
+                            <ul class="year-hundred-cont clearfix">
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="year-hundred-cont clearfix">
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="celendar-right">
+                <div class="clock-wrap">
+                    <div class="clock">
+                        <span class="split-cirle"></span>
+                        <span class="split-hour"></span>
+                        <span class="split-minute"></span>
+                        <span class="split-second"></span>
+                        <ul class="clock-list">
+                        </ul>
+                    </div>
+                </div>
+                <p class="time">18:54:45</p>
+                <p class="day">星期二</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="drawBox">
+        <ul class="windowBox-bar-model clearFix">
+            <li>-</li>
+            <li>+</li>
+            <li>X</li>
+        </ul>
+        <ul class="drawingBar">
+            <li><input type="button" value="block"></li>
+            <li><input type="button" value="red"></li>
+            <li><input type="button" value="blue"></li>
+            <li><input type="button" value="green"></li>
+            <li><input type="button" value="white"></li>
+        </ul>
+        <canvas class="drawing" width="300" height="400"></canvas>
+    </div> -->
+</div>
+<script src="js/tween.js"></script>
+<script src="js/dataList.js"></script>
+<script src="js/create.js"></script>
+<script src="js/celendar.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
